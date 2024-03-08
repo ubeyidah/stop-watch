@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-top: 80px;
+  flex-direction: column;
+}
+
+.app {
+  border: 3px solid rgb(6, 122, 189);
+  padding: 30px 70px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.app h3 {
+  font-size: 60px;
+  text-align: center;
+  font-family: monospace;
+  color: rgb(6, 122, 189);
+}
+
+.app .btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.app .btns .btn:hover {
+  filter: brightness(150%);
+}
+
+.app .btns .btn:active {
+  scale: .97;
+}
+
+.app .btns .btn {
+  cursor: pointer;
+  font-size: 17px;
+  padding: 12px 22px;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 50px;
+}
+
+.app .btns .btn-start {
+  background-color: rgb(6, 122, 189);
+  color: white;
+}
+
+.app .btns .btn-reset {
+  color: white;
+  background-color: darkred;
+}
+
+/* javascript class */
+.app .btns .is-stop-color {
+  background-color: rgb(97, 2, 2);
+}
+
+.app .btns .is-lap-color {
+  background-color: rgb(6, 122, 189);
+}
+
+/* lap */
+.display {
+  margin-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 508px;
+}
+
+.lap-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid rgb(6, 122, 189);
+  margin-bottom: 20px;
+}
+
+.lap-header div {
+  padding: 4px 10px;
+}
+
+.lap-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lap-body .lap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.lap-body .lap div {
+  padding: 4px 10px;
+  text-align: left;
+  color: rgb(134, 133, 133);
+}
+
+.lap-body .lap div:nth-child(3),
+.lap-header div:nth-child(3) {
+  text-align: right;
+}
